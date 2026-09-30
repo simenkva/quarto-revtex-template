@@ -1,0 +1,11 @@
+% STIX Two text and math fonts from _fonts/ (requires lualatex or xelatex).
+\usepackage{unicode-math}
+\setmainfont{STIXTwoText}[
+  Path = _fonts/,
+  Extension = .ttf,
+  UprightFont = *-Regular,
+  ItalicFont = *-Italic,
+  BoldFont = *-Bold,
+  BoldItalicFont = *-BoldItalic,
+]
+\setmathfont{STIXTwoMath-Regular.otf}[Path = _fonts/]

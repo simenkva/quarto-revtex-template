@@ -1,0 +1,32 @@
+/* STIX Two web fonts, served from this folder (SIL OFL 1.1, see OFL.txt). */
+@font-face {
+  font-family: "STIX Two Text";
+  src: url("STIXTwoText-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "STIX Two Text";
+  src: url("STIXTwoText-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "STIX Two Text";
+  src: url("STIXTwoText-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "STIX Two Text";
+  src: url("STIXTwoText-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+body {
+  font-family: "STIX Two Text", "Times New Roman", serif;
+}

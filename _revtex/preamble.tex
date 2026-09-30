@@ -1,0 +1,8 @@
+% caption (via ltcaption) defines a longtable* environment, and RevTeX later tries to
+% \newenvironment its own in begindocument/before, which fails. Remove caption's
+% version just before RevTeX installs its own.
+\AddToHook{begindocument/before}[revtex-fix]{%
+  \expandafter\let\csname longtable*\endcsname\relax
+  \expandafter\let\csname endlongtable*\endcsname\relax
+}
+\DeclareHookRule{begindocument/before}{revtex-fix}{before}{revtex4-2}

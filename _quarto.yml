@@ -1,0 +1,45 @@
+project:
+  type: manuscript
+
+# STIX Two text and math fonts in HTML and PDF (see _fonts/). Set to false for default fonts.
+stix: true
+
+# Matplotlib style for Python figures (see revtexplot/). Set to false for matplotlib defaults.
+plot-style: true
+
+filters:
+  - _fonts/stix.lua
+
+manuscript:
+  article: index.qmd
+
+format:
+  html:
+    html-math-method:
+      method: mathjax
+      url: "https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml-nofont.js"
+    comments:
+      hypothesis: true
+  docx: default
+  jats: default
+  pdf:
+    pdf-engine: lualatex
+    documentclass: revtex4-2
+    classoption:
+      - aps
+      - pra
+      - reprint
+      - superscriptaddress
+    cite-method: natbib
+    biblio-style: apsrev4-2
+    keep-tex: true
+    number-sections: true
+    notebook-links: false
+    include-in-header:
+      - _revtex/preamble.tex
+    template-partials:
+      - _revtex/title.tex
+      - _revtex/before-body.tex
+
+execute:
+  freeze: true
