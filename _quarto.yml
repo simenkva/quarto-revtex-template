@@ -42,4 +42,4 @@ format:
       - _revtex/before-body.tex
 
 execute:
-  freeze: true
+  freeze: auto

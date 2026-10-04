@@ -1,4 +1,5 @@
 /.quarto/
+/_preview/
 **/*.quarto_ipynb
 /site_libs/
 /indexNotes.bib

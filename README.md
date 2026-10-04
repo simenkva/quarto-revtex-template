@@ -2,6 +2,29 @@
 
 This repository contains a minimal [quarto](https://www.quarto,org) manuscript project that is set up to use RevTex 4.2 as LaTeX documentclass when rendering PDF.
 
+## Live preview
+
+From this directory, use:
+
+```sh
+quarto preview index.qmd --profile preview --to html
+```
+
+Stop any existing preview with Ctrl+C before starting this command.
+
+The optional `preview` profile works around the manuscript preview failure in
+Quarto 1.9.38 ([Quarto issue #13464](https://github.com/quarto-dev/quarto-cli/issues/13464)).
+It renders the article as a regular Quarto document into `_preview/`, retaining
+Python execution, fonts, math, and article formatting. It skips the separate
+Article Notebook view and manuscript packaging during live preview.
+
+For full manuscript output, omit the profile:
+
+```sh
+quarto render --to html
+quarto render --to pdf
+```
+
 ## Fonts
 
 By default the HTML and PDF output use the [STIX Two](https://github.com/stipub/stixfonts) fonts for text and math. The font files are in `_fonts/`, so nothing needs to be installed. The fonts are switched on by one line in `_quarto.yml`:
@@ -32,4 +55,3 @@ Use `figsize=rp.WIDE` for figures spanning both columns, and `rp.figsize(width, 
 # License
 
 This project is licensed under the [MIT License](LICENSE).
-

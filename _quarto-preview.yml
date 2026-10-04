@@ -1,0 +1,20 @@
+# Authoring workaround for Quarto's manuscript preview temp-file error:
+# https://github.com/quarto-dev/quarto-cli/issues/13464
+# Use: quarto preview index.qmd --profile preview --to html
+project:
+  type: default
+  output-dir: _preview
+  render:
+    - index.qmd
+
+# Preserve the manuscript's article presentation while skipping notebook packaging.
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-location: left
+    title-block-style: manuscript
+
+execute:
+  echo: false
+  warning: false
